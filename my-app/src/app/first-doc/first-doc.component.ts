@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Hamburger } from '../models/Hamburger-model.model';
 
 @Component({
   selector: 'app-first-doc',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first-doc.component.scss']
 })
 export class FirstDocComponent implements OnInit {
+  @Input() hamburg!: Hamburger;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit() {}
 }
