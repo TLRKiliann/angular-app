@@ -1,0 +1,29 @@
+.landing-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.landing-links {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-enter {
+  font-size: 1.6rem;
+  color: red;
+  text-shadow: 1px 1px 0px black;
+  box-shadow: 2px 2px 5px black;
+}
+
+.btn-enter:hover {
+  color: white;
+  text-shadow: 1px 1px 0px red;
+  box-shadow: 2px 2px 5px red;
+}
