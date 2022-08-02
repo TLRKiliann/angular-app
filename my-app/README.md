@@ -1,27 +1,79 @@
-# MyApp
+# Angular with Routing & Services
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+## Install
 
-## Development server
+npm install -g @angular/cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ng new my-app --style=scss
 
-## Code scaffolding
+cd my-app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`ng g c ...` replace `ng generate component ...`
 
-## Build
+ng g c list-doc
+ng g c premier-doc
+ng g c single-doc
+ng g c header-doc
+ng g c landing-page-doc
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+Create a Model :
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- models/appel-model.model.ts
 
-## Running end-to-end tests
+Create a class AppelModelService & a class ApproutingModule simply in a file :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Look at :
 
-## Further help
+- app-routing.module.ts
+- services/appel.service.ts
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## Schema
+
+> Start here: app.module => app.component.html => header + landing-page & routing
+
+> list-doc map with `*ngFor` => premier-doc => single-doc with @Input()
+
+> app-routing.module => landing-page.component.html
+
+> app.component.ts & header.component.ts => nothing to do.
+
+---
+
+## Service & Model are called by
+
+- list-doc
+- premier-doc
+- single-face
+
+### Service
+
+Service content data list & 3 functions for actions (btn).
+
+- list-doc
+
+Call data list from Service with getAllAppelModel()
+list-doc.component.html => Map the list with `*ngFor`.
+
+- premier-doc
+
+Content functions for actions btn which are managed by Service.
+
+- single-face
+
+Content functions for actions btn which are managed by Service.
+
+---
+
+## Routing 
+
+> app-routing.module.ts => RouterModule, Routes, NgModule
+
+- list-doc (managed by app-routing.module.ts (with 'appelModels' value)).
+- premier-doc => Router
+- single-face => ActivatedRoute
+- landing-page => Router
+- header(html) => [routerLinkActiveOptions] + routerLink + routerLinkActive
