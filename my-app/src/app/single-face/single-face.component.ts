@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppelModel } from '../models/appel-model.model';
-import { AppelModelService } '../services/appel-model.service';
-import { ActivateRoute } from '@angular/router';
+import { AppelModelService } from '../services/appel.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class SingleFaceComponent implements OnInit {
   btnText!: string;
 
   constructor(private appelModelService: AppelModelService,
-              private route: ActivateRoute) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.btnText = "Like";

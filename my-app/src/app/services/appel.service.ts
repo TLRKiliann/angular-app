@@ -6,7 +6,7 @@ import { AppelModel } from '../models/appel-model.model';
 	providedIn: 'root'
 })
 export class AppelModelService {
-	appelModels!: AppelModel[] = [
+	appelModels: AppelModel[] = [
     {
       id: 1,
       title: "Title One",

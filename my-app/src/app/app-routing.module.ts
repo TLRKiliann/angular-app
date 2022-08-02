@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListDocComponent } from './list-doc.component';
-import { LandingPageComponent } from './landing-page.component';
-import { SingleFaceComponent } from './app-single-face.component';
+import { ListDocComponent } from './list-doc/list-doc.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SingleFaceComponent } from './single-face/single-face.component';
 
 const routes: Routes = [
     {path: 'appelModels/:id', component: SingleFaceComponent},

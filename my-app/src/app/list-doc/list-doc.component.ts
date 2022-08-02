@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppelModel } from '../models/appel-model.model';
-import { AppelModelService } from '../services/appel-model.service';
+import { AppelModelService } from '../services/appel.service';
 
 @Component({
   selector: 'app-list-doc',
@@ -13,7 +13,7 @@ export class ListDocComponent implements OnInit {
   constructor(private appelModelService: AppelModelService) { }
 
   ngOnInit(): void {
-    this.appelModels = this.appelModelService.getAllModels();
+    this.appelModels = this.appelModelService.getAllAppelModel();
   }
 
 }
