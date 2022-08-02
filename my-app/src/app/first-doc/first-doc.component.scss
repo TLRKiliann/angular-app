@@ -1,11 +1,54 @@
-.first-docclass {
-	margin: auto;
-	width: 80%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justifiy-content: center;
-	border: 2px solid blue;
-	background: steelblue;
-	color: white;
+.face-snap-card {
+  box-sizing: border-box;
+  width: 50%;
+  margin: 20px auto;
+  padding: 5px 20px;
+  box-shadow: 2px 2px 4px black;
+  img {
+    width: 20%;
+  }
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+button {
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 5px black;
+  margin: 0px 10px;
+  outline: none;
+  font-weight: 500;
+  color: blue;
+  &:active {
+    transform: translate(1px 1px);
+  }
+  &:hover {
+    background: lightblue;
+    color: black;
+  }
+}
+
+.snapped {
+  background-color: rgba(lightgreen, 0.4);
+  color: darkgreen;
+  button {
+    box-shadow: lightgreen 3px 3px 7px;
+    color: darkgreen;
+    &:active {
+      box-shadow: lightgreen 0 0 5px;
+    }
+  }
+}
+
+.btn-view {
+  margin-bottom: 15px;
+}
+
+.btn-view:hover {
+  color: dimgrey;
+  background: lightgrey;
 }
