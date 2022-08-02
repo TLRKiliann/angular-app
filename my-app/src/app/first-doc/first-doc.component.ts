@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Hamburger } from '../models/Hamburger-model.model';
+import { AppelModel } from '../models/appel-model.model';
+import { AppelModelService } '../services/appel-model.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-first-doc',
@@ -7,9 +10,28 @@ import { Hamburger } from '../models/Hamburger-model.model';
   styleUrls: ['./first-doc.component.scss']
 })
 export class FirstDocComponent implements OnInit {
-  @Input() hamburg!: Hamburger;
+  @Input() appelModel!: AppelModel;
 
-  constructor() {}
+  btnText!: string;
 
-  ngOnInit() {}
+  constructor(private appelModelService: AppelModelService,
+              private router: Router) {}
+
+  ngOnInit() {
+    this.btnText = "Like";
+  }
+
+  onSnaps() {
+    if (this.btnText === 'Like') {
+      this.appelModelService.appelModelById(this.appelModel.id, 'snap');
+      this.btnText = 'Dislike';
+    } else {
+      this.appelModelService.appelModelById(this.appelModel.id, 'unsnap');
+      this.btnText = 'Like';
+    }
+  }
+
+  onViewFaceSnap() {
+    this.router.navigateByUrl(`appelModels/${this.appelModel.id}`);
+  }
 }
