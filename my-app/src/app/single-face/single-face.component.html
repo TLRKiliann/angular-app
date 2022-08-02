@@ -1,0 +1,20 @@
+<div class="face-snap-card" [ngClass]="{ snapped: btnText === 'Dislike' }">
+    <h2>{{ appelModel.title | titlecase }}</h2>
+    <button routerLink="/appelModels" class="btn-back">Back</button>
+    <p>{{ appelModel.description }}</p>
+    <p>{{ 4346234.36 | number: '1.0-2' }}</p>
+    <p>{{ 0.3667 | percent: '1.0-2' }}</p>
+    <p>{{ 36.10 | currency: 'US' : 'code' }}</p>
+    <p>Mis en ligne: le {{ appelModel.createDate | date: 'dd/MM/yy, à HH:mm'}}</p>
+    <img [src]="appelModel.imgUrl" [alt]="appelModel.title" />
+    <p *ngIf="appelModel.location">Image prise à : {{ appelModel.location }}</p>
+    <p>
+        <span [ngStyle]="{ color: 'rgb(0,' + appelModel.snaps * 2 + ',0)' }">
+            {{ appelModel.snaps }}
+        </span>
+        <button (click)="onSnaps()">
+            Add snap
+        </button>
+        {{ btnText }}
+    </p>
+</div>
