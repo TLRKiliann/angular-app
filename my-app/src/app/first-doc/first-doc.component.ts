@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppelModel } from '../models/appel-model.model';
-import { AppelModelService } '../services/appel-model.service';
+import { AppelModelService } from '../services/appel.service';
 import { Router } from '@angular/router';
 
 
