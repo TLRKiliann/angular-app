@@ -11,4 +11,7 @@ cd my-app
 
 ng serve
 
+ng test
+
+ng e2e
 
